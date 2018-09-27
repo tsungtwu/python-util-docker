@@ -53,8 +53,10 @@ services:
     environment:
       PASSWORD: bookbook
       USE_HTTP: 1
+    volumes:
+      - ${HOME}/Documents/ipython_workspace:/notebooks
     ports:
-      - "80:8888"
+      - "8888:8888"
 
   elasticserch-head:
     image: mobz/elasticsearch-head:5
